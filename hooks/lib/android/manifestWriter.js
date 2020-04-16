@@ -253,7 +253,7 @@ function isLaunchActivity(activity) {
     }
 
     var isMainAction = ('android.intent.action.MAIN' === action[0]['$']['android:name']);
-    var isLauncherCategory = ('android.intent.category.LAUNCHER' === category[0]['$']['android:name']);
+    var isLauncherCategory = ('android.intent.category.LAUNCHER' === category[0]['$']['android:name']) || ('android.intent.category.LEANBACK_LAUNCHER' === category[0]['$']['android:name']);
 
     return isMainAction && isLauncherCategory;
   });
